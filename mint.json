@@ -91,6 +91,9 @@
       "tagId": "GTM-PM7S2JD8"
     }
   },
+  "feedback": {
+    "thumbsRating": true
+  },
   "footerSocials": {
     "twitter": "https://twitter.com/mintlify",
     "github": "https://github.com/mintlify",
