@@ -35,16 +35,6 @@
     }
   ],
   "anchors": [
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://gists.ai/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://gists.ai/blog"
-    }
   ],
   "navigation": [
     {
@@ -58,27 +48,39 @@
     {
       "group": "Essentials",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation"
+        "essentials/prompts",
+        "essentials/openai",
+        "essentials/chats",
+        "essentials/characters",
+        "essentials/gists",
+        "essentials/variables",
+        "essentials/variations",
+        "essentials/test-cases",
+        "essentials/evaluators",
+        "essentials/benchmarks"
+      ]
+    },
+    {
+      "group": "Guides",
+      "pages": [
+        "guides/chat",
+        "guides/gist-editor",
+        "guides/api",
+        "guides/zapier",
+        "guides/slack"
       ]
     },
     {
       "group": "API Documentation",
       "pages": [
-        "api-reference/authentication",
         "api-reference/authentication"
       ]
     },
     {
       "group": "Endpoint Examples",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
-        "api-reference/endpoint/delete"
+        "api-reference/endpoint/generate",
+        "api-reference/endpoint/gists"
       ]
     }
   ],
