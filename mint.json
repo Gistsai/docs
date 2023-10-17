@@ -26,7 +26,7 @@
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://app.gists.com"
+    "url": "https://app.gists.ai"
   },
   "tabs": [
     {
@@ -34,16 +34,11 @@
       "url": "api-reference"
     }
   ],
-  "anchors": [
-  ],
+  "anchors": [],
   "navigation": [
     {
       "group": "Get Started",
-      "pages": [
-        "introduction",
-        "quickstart",
-        "development"
-      ]
+      "pages": ["introduction", "quickstart"]
     },
     {
       "group": "Essentials",
@@ -62,26 +57,25 @@
     },
     {
       "group": "Guides",
+      "pages": ["guides/chat", "guides/gist-editor", "guides/api", "guides/zapier", "guides/slack"]
+    },
+    {
+      "group": "Gist Recipes",
       "pages": [
-        "guides/chat",
-        "guides/gist-editor",
-        "guides/api",
-        "guides/zapier",
-        "guides/slack"
+        "recipes/classification",
+        "recipes/summarization",
+        "recipes/brand-voice",
+        "recipes/information-extraction",
+        "recipes/draft-generation"
       ]
     },
     {
       "group": "API Documentation",
-      "pages": [
-        "api-reference/authentication"
-      ]
+      "pages": ["api-reference/authentication"]
     },
     {
       "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/generate",
-        "api-reference/endpoint/gists"
-      ]
+      "pages": ["api-reference/endpoint/generate", "api-reference/endpoint/gists"]
     }
   ],
   "analytics": {
