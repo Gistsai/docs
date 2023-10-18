@@ -57,7 +57,16 @@
     },
     {
       "group": "Guides",
-      "pages": ["guides/chat", "guides/gist-editor", "guides/api", "guides/zapier", "guides/slack"]
+      "pages": [
+        "guides/chat",
+        "guides/gist-editor",
+        "guides/characters",
+        "guides/desktop",
+        "guides/extension",
+        "guides/api",
+        "guides/zapier",
+        "guides/slack"
+      ]
     },
     {
       "group": "Gist Recipes",
