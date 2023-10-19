@@ -5,14 +5,13 @@ title: 'Tutorial'
 Learn how to create a trustworthy LLM prompt in 10 minutes. 
 
 ## Overview of steps
-1. Sign up
-1. Create a gist
-1. Modify the default variant
-1. Enter the prompt with variables
+1. Sign up 
+1. Create a gist 
+1. Edit the default variant 
 1. Run the gist
-1. Add a test case
-1. Turn on evaluators
-1. Benchmark
+1. Add a test case 
+1. Turn on evaluators 
+1. Benchmark 
 1. Check results
 
 ## Detailed steps
@@ -25,13 +24,17 @@ Learn how to create a trustworthy LLM prompt in 10 minutes.
     1. Click on `Gists` on the left menu
     2. Click on `New Gist` button on the page
     3. Accept the default name or give it a custom name in the modal
+    4. Click on `Create` button
   </Accordion>
-  <Accordion title="3. Modify the default variant" defaultOpen>
+  <Accordion title="3. Edit the default variant" defaultOpen>
+    On the management page for the new gist you just created,
+    1. Click on `Default` variant in the list to enter the `Variant Editor` page
+    2. On the right panel of `Variant Editor`, enter your LLM prompts. You can add variables by wrapping the variable name with curly brackets like this: `{{<variable_name>}}`
     
-    1. Click on `Gists` on the left menu
-    2. Click on `New Gist` button on the page
-    3. Accept the default gist name or give it a custom name in the modal
-    <Tip>All gists are versioned so you can create new versions without breaking existing behavior.</Tip>
+        <Warning>Space between curly brackets and variable names or in the variable names are not supported.</Warning>
+        <Note>Here is an example LLM prompt you can copy and try:</Note>
+        <Code>hello</Code>
+    3. Click on `Save` button on the top right
   </Accordion>
   <Accordion title="4. Create a gist" defaultOpen>
     1. Click on `Gists` on the left menu
