@@ -1,15 +1,15 @@
 ---
-title: 'Tutorial'
+title: 'Quick start'
 ---
 
-Learn how to create a trustworthy LLM prompt in 10 minutes. 
+Learn how to create a trustworthy LLM prompt in 10 minutes.
 
 ## Overview of steps
-1. Sign up 
-1. Create a gist 
-1. Edit the default variant 
+1. Sign up
+1. Create a gist
+1. Edit the default variant
 1. Run the gist
-1. Save the run as a test case 
+1. Save the run as a test case
 
 ## Detailed steps
 
@@ -27,18 +27,18 @@ Learn how to create a trustworthy LLM prompt in 10 minutes.
     On the management page for the new gist you just created,
     1. Click on `Default` variant in the list to enter the `Variant Editor` page
     2. On the right panel of `Variant Editor`, enter your LLM prompts. You can add variables by wrapping the variable name with curly brackets like this: `{{<variable_name>}}`
-    
+
         <Warning>Space between curly brackets and variable names or in the variable names are not supported.</Warning>
         <Note>Here is an example LLM prompt you can copy and try:</Note>
         ```text
-        Classify the following content into one of these categories: 
+        Classify the following content into one of these categories:
         [sport, celebrity, politics, tech, business, economics, local]
 
         content: """
         {{content}}
         """
 
-        Format the response in json with schema: {category: string} 
+        Format the response in json with schema: {category: string}
         ```
     3. Click on `Save` button on the top right
   </Accordion>
@@ -50,7 +50,7 @@ Learn how to create a trustworthy LLM prompt in 10 minutes.
     2. You should see a table with headers `variant` and `value`
     3. Enter some value into the `value` cell for the variables. E.g. `Patriots have lost another game this season` if you're using the example prompt above
     4. Click on the green `Run` button at the bottom
-        
+
         <Tip>It can take the LLM a few seconds to respond</Tip>
   </Accordion>
   <Accordion title="5. Save the run as a test case" defaultOpen>
@@ -64,15 +64,3 @@ Learn how to create a trustworthy LLM prompt in 10 minutes.
 </AccordionGroup>
 
 <Check>Fantastic! You can now iterate on LLM prompts and add test cases as you go to make sure consistent responses.</Check>
-
-## What's next?
-
-Check out the next tutorial in which we'll cover evaluators and benchmarks.
-
-<CardGroup cols={1}>
-
-<Card title="Evaluators and benchmarks" icon="chart-mixed" href="/tutorial-evaluators">
-  Add flair to your docs with personalized branding.
-</Card>
-
-</CardGroup>
