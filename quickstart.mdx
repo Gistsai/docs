@@ -17,47 +17,49 @@ Learn how to create a trustworthy LLM prompt in 10 minutes.
 Create a free Gists account on the [Sign In](https://app.gists.ai/sign_in) page if you haven't already.
 </Accordion>
   
-  <Accordion title="2. Create a gist" defaultOpen>
-    1. Navigate to `Gists` on the left menu
-    2. Click on `New Gist` button on the page
-    3. Accept the default name or give it a custom name in the modal
-    4. Click on the `Create` button
-  </Accordion>
-  <Accordion title="3. Edit the default variant" defaultOpen>
-    On the management page for the new gist you just created,
-    1. Click on `Default` variant in the list to enter the `Variant Editor` page
-    2. On the right panel of `Variant Editor`, enter your LLM prompts. You can add variables by wrapping the variable name with curly brackets like this: `{{<variable_name>}}`
+<Accordion title="2. Create a gist" defaultOpen>
+1. Navigate to `Gists` on the left menu
+2. Click on `New Gist` button on the page
+3. Accept the default name or give it a custom name in the modal
+4. Click on the `Create` button
+</Accordion>
+<Accordion title="3. Edit the default variant" defaultOpen>
+On the management page for the new gist you just created,
+1. Click on `Default` variant in the list to enter the `Variant Editor` page
+2. On the right panel of `Variant Editor`, enter your LLM prompts. You can add variables by wrapping the variable name with curly brackets like this: `{{<variable_name>}}`
 
-        <Warning>Space between curly brackets and variable names or in the variable names are not supported.</Warning>
-        <Note>Here is an example LLM prompt you can copy and try:</Note>
-        ```text
-        Classify the following content into one of these categories:
-        [sport, celebrity, politics, tech, business, economics, local]
+    <Warning>Space between curly brackets and variable names or in the variable names are not supported.</Warning>
+    <Note>Here is an example LLM prompt you can copy and try:</Note>
+    ```text
+    Classify the following content into one of these categories:
+    [sport, celebrity, politics, tech, business, economics, local]
 
-        content: """
-        {{content}}
-        """
+    content: """
+    {{content}}
+    """
 
-        Format the response in json with schema: {category: string}
-        ```
-    3. Click on `Save` button on the top right
-  </Accordion>
+    Format the response in json with schema: {category: string}
+    ```
+3. Click on `Save` button on the top right
+</Accordion>
+
 <Check>Good job! You've created your first gist. Let's test it out!</Check>
-  <Accordion title="4. Run the gist" defaultOpen>
-    1. On the bottom of the right panel, find the `Run` tab
-    2. You should see a table with headers `variant` and `value`
-    3. Enter some value into the `value` cell for the variables. E.g. `Patriots have lost another game this season` if you're using the example prompt above
-    4. Click on the green `Run` button at the bottom
 
-        <Tip>It can take the LLM a few seconds to respond</Tip>
-  </Accordion>
-  <Accordion title="5. Save the run as a test case" defaultOpen>
-    When the LLM responds, the output will show up in the `Output` panel, next to the `Variable` panel
-    1. Click on the More icon with three vertical dots on the right
-    2. Click on `Add to Tests` on the menu
-    3. On the bottom left corner of the page, you'll see the `Tests` tab. A new test case called `Untitled test case` should be added. Feel free to change its name.
+<Accordion title="4. Run the gist" defaultOpen>
+1. On the bottom of the right panel, find the `Run` tab
+2. You should see a table with headers `variant` and `value`
+3. Enter some value into the `value` cell for the variables. E.g. `Patriots have lost another game this season` if you're using the example prompt above
+4. Click on the green `Run` button at the bottom
 
-    <Tip>By saving inputs and outputs as test cases, you can ran them when you change your prompts to make sure they all still pass.</Tip>
-  </Accordion>
+    <Tip>It can take the LLM a few seconds to respond</Tip>
+</Accordion>
+<Accordion title="5. Save the run as a test case" defaultOpen>
+When the LLM responds, the output will show up in the `Output` panel, next to the `Variable` panel
+1. Click on the More icon with three vertical dots on the right
+2. Click on `Add to Tests` on the menu
+3. On the bottom left corner of the page, you'll see the `Tests` tab. A new test case called `Untitled test case` should be added. Feel free to change its name.
+
+<Tip>By saving inputs and outputs as test cases, you can ran them when you change your prompts to make sure they all still pass.</Tip>
+</Accordion>
 
 <Check>Fantastic! You can now iterate on LLM prompts and add test cases as you go to make sure consistent responses.</Check>
