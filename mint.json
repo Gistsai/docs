@@ -95,6 +95,12 @@
       ]
     }
   ],
+  "api": {
+    "baseUrl": "https://api.gists.ai/v1/",
+    "auth": {
+      "method": "key"
+    }
+  },
   "analytics": {
     "gtm": {
       "tagId": "GTM-PM7S2JD8"
