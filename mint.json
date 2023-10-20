@@ -38,7 +38,10 @@
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart"]
+      "pages": [
+        "introduction",
+        "quickstart"
+      ]
     },
     {
       "group": "Essentials",
@@ -80,7 +83,9 @@
     },
     {
       "group": "API Documentation",
-      "pages": ["api-reference/authentication"]
+      "pages": [
+        "api-reference/authentication"
+      ]
     },
     {
       "group": "Generate",
@@ -91,7 +96,9 @@
     },
     {
       "group": "Me",
-      "pages": ["api-reference/me/get-current-user-information"]
+      "pages": [
+        "api-reference/me/me"
+      ]
     }
   ],
   "api": {
@@ -99,6 +106,9 @@
     "auth": {
       "method": "key",
       "name": "GISTS-API-KEY"
+    },
+    "playground": {
+      "mode": "hide"
     }
   },
   "openapi": "/openapi.yml",
