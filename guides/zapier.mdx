@@ -8,18 +8,32 @@ Zapier comes with a built-in chatGPT workflow. However, it's hard to fine-tune y
 
 ## Steps
 
-1. Grab your Api key from [your setings page](https://app.gists.ai/settings)
-1. Create a new Zapier Zap, set the trigger to be whatever you want
-1. Add a new action, search for Gists, and select it
+<Accordion title="1. Add Gists to your zap" defaultOpen>
+1. Go to the [Zapier dashboard](https://zapier.com/app/zaps)
+1. Create a new zap with some trigger or edit an existing zap
+1. Add a step, search for Gists, and select it
 1. In the `Event` field, select `Call Gist`
 1. Click on `Continue` to go to the `Account` section
+</Accordion>
+
+<Accordion title="2. Allow Zapier to access your gists" defaultOpen>
+1. Grab your Api key from [your settings page](https://app.gists.ai/settings)
 1. Click on `Connect a new account`
 1. Paste your Api key into the Gists API Key text field in the pop up window
 1. Click on `Yes, Continue to Gists`
 1. Click on  `Continue` to go to the `Action` section
+</Accordion>
+
+<Accordion title="3. Choose the gist you want to call" defaultOpen>
 1. Click on `Gist` and select the Gist you want to use
 1. (Optional) Click on `Variant` if you want to use a specific variant of the Gist. Leave empty and it will choose a variant based on traffic distribution
-1. Enter values for the variables in your gist.
+1. Assign values for the variables in your gist
 1. Click on `Continue` to go to the `Test` section
+</Accordion>
+
+<Accordion title="4. Test and publish" defaultOpen>
 1. Click on `Test step`
 1. If everything is fine, click on `Publish` to make your Zap live
+</Accordion>
+
+<Check>Great job! You can now prompt engineer in Gists and your zap will automatically use the latest prompt.</Check>
