@@ -97,7 +97,7 @@
     {
       "group": "Me",
       "pages": [
-        "api-reference/me/get-current-user-information"
+        "api-reference/me/me"
       ]
     }
   ],
