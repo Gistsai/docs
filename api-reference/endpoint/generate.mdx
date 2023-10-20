@@ -4,8 +4,16 @@ api: "POST /generate/{gistId}/{variantSlug}"
 description: "This endpoint calls the gist and the variant specified in the url parameter"
 ---
 
-### Body
+### URL parameters
+<ParamField body="gistId" type="string">
+    gist id
+</ParamField>
 
+<ParamField body="variantSlug" type="string">
+    gist id
+</ParamField>
+
+### Body
 <ParamField body="values" type="json">
   A dictionary of variable names and values for the variables in the gist.
 </ParamField>
