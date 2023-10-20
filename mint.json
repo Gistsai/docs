@@ -101,7 +101,7 @@
       "name": "GISTS-API-KEY"
     }
   },
-  "openapi": ["/openapi.yml"],
+  "openapi": "/openapi.yml",
   "integrations": {
     "intercom": "p3p3z10k"
   },
