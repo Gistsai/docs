@@ -38,10 +38,7 @@
   "navigation": [
     {
       "group": "Get Started",
-      "pages": [
-        "introduction",
-        "quickstart"
-      ]
+      "pages": ["introduction", "quickstart"]
     },
     {
       "group": "Essentials",
@@ -83,18 +80,24 @@
     },
     {
       "group": "API Documentation",
-      "pages": [
-        "api-reference/authentication"
-      ]
+      "pages": ["api-reference/authentication"]
     },
     {
       "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/generate",
-        "api-reference/endpoint/gists"
-      ]
+      "pages": ["api-reference/endpoint/generate", "api-reference/endpoint/gists"]
     }
   ],
+  "api": {
+    "baseUrl": "https://api.gists.ai/v1",
+    "auth": {
+      "method": "key",
+      "name": "GISTS-API-KEY"
+    }
+  },
+  "openapi": ["/openapi.yml"],
+  "integrations": {
+    "intercom": "p3p3z10k"
+  },
   "analytics": {
     "gtm": {
       "tagId": "GTM-PM7S2JD8"

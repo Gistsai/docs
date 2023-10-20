@@ -1,0 +1,185 @@
+openapi: 3.0.3
+info:
+  title: Gists API
+  description: The LLM-native way of shipping trustworthy AI products
+  termsOfService: https://gists.ai/terms/
+  contact:
+    email: team@gists.ai
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+externalDocs:
+  description: Documentation and guides
+  url: http://docs.gists.ai
+servers:
+  - url: https://api.gists.ai/v1
+tags:
+  - name: generate
+    description: Calling gist to generate outputs
+  - name: me
+    description: Check logged in user info based on the API key
+paths:
+  /generate/{gistId}:
+    post:
+      tags:
+        - generate
+      summary: Generate output using the gist
+      operationId: generate
+      parameters:
+        - name: gistId
+          in: path
+          description: Id of the gist to call
+          required: true
+          explode: true
+          schema:
+            type: string
+      requestBody:
+        description: Provide the values for the gist's variables as json
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenerationValues'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenerationOutput'
+        '400':
+          description: Invalid parameters
+  /generate/{gistId}/{variantSlug}:
+    post:
+      tags:
+        - generate
+      summary: Generate output with a specific variant of the gist
+      operationId: generateWithVariant
+      parameters:
+        - name: gistId
+          in: path
+          description: Id of the gist to call
+          required: true
+          explode: true
+          schema:
+            type: string
+        - name: variantSlug
+          in: path
+          description: Slug of the variant of the gist
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Provide the values for the gist's variables as json
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenerationValues'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenerationOutput'
+        '400':
+          description: Invalid parameters
+  /me:
+    get:
+      tags:
+        - me
+      summary: Get current user information
+      operationId: me
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Me'
+        default:
+          description: successful operation
+components:
+  schemas:
+    Me:
+      type: object
+      properties:
+        error:
+          type: string
+        data:
+          type: object
+          properties:
+            id:
+              type: string
+            name:
+              type: string
+            company_id:
+              type: string
+            email:
+              type: string
+    GenerationValues:
+      type: string
+    Gist:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        fields:
+          type: array
+          items:
+            $ref: '#/components/schemas/Field'
+      xml:
+        name: customer
+    Field:
+      type: object
+      properties:
+        key:
+          type: string
+        label:
+          type: string
+    Variant:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        slug:
+          type: string
+        description:
+          type: string
+        model:
+          type: string
+        max_length:
+          type: integer
+        temperature:
+          type: number
+        top_p:
+          type: number
+      xml:
+        name: address
+    GenerationOutput:
+      type: object
+      properties:
+        error:
+          type: string
+        data:
+          type: object
+          properties:
+            id:
+              type: string
+            content:
+              type: string
+      xml:
+        name: category
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: GISTS-API-KEY
+      in: header

@@ -1,13 +1,21 @@
 ---
 title: "Generate"
-api: "POST https://api.gists.ai/v1/generate/{gistId}/{variantSlug}"
+api: "POST /generate/{gistId}/{variantSlug}"
 description: "This endpoint calls the gist and the variant specified in the url parameter"
 ---
 
-### Body
+### Path parameters
+<ParamField path="gistId" required type="string">
+    gist id
+</ParamField>
 
-<ParamField body="body" type="json">
-  This is the current user group token you have for the user group that you want to rotate.
+<ParamField path="variantSlug" type="string">
+    variant slug
+</ParamField>
+
+### Body
+<ParamField body="values" type="json">
+  A dictionary of variable names and values for the variables in the gist.
 </ParamField>
 
 ### Response
@@ -17,7 +25,6 @@ description: "This endpoint calls the gist and the variant specified in the url 
 </ResponseField>
 
 <ResponseField name="data" type="object">
-  The contents of the user group
   <Expandable title="data" defaultOpen>
     <ResponseField name="id" type="string">
       The gist call id. Used for troubleshooting and tracing errors.
@@ -34,9 +41,10 @@ curl --location --request POST 'https://api.gists.ai/v1/generate/<gist_id>/<vari
 --header 'Content-Type: application/json' \
 --header 'GISTS-API-KEY: <api_key>' \
 --data-raw '{
-    "variable_1": "value 1",
-    "variable_2": "value 2",
-    ...
+    "values": {
+        "variable_1": "value 1",
+        "variable_2": "value 2",
+    }
 }'
 ```
 </RequestExample>
