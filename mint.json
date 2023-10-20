@@ -96,7 +96,7 @@
     }
   ],
   "api": {
-    "baseUrl": "https://api.gists.ai/v1/",
+    "baseUrl": "https://api.gists.ai/v1",
     "auth": {
       "method": "key",
       "name": "GISTS-API-KEY"
