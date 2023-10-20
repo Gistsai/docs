@@ -1,20 +1,21 @@
 ---
 title: "Generate"
 api: "POST /generate/{gistId}/{variantSlug}"
+openapi: "POST /generate/{gistId}/{variantSlug}"
 description: "This endpoint calls the gist and the variant specified in the url parameter"
 ---
 
 ### Path parameters
 <ParamField path="gistId" required type="string">
-    gist id
+  Id of the gist to use
 </ParamField>
 
 <ParamField path="variantSlug" type="string">
-    variant slug
+  (optional) Slug of the variant to use. If not specified, we'll choose a variant based on variant traffic allocation.
 </ParamField>
 
 ### Body
-<ParamField body="values" type="json">
+<ParamField body="values" type="object">
   A dictionary of variable names and values for the variables in the gist.
 </ParamField>
 
