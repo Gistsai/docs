@@ -1,3 +1,51 @@
 ---
-openapi: get /me
+title: "Me"
+api: "GET /me"
+openapi: "GET /me"
+description: "This endpoint gets the information of current user based on the Api Key"
 ---
+
+### Response
+
+<ResponseField name="error" type="string">
+  Indicates whether the call failed with error
+</ResponseField>
+
+<ResponseField name="data" type="object">
+  <Expandable title="data" defaultOpen>
+    <ResponseField name="id" type="string">
+      User id
+    </ResponseField>
+    <ResponseField name="email" type="string">
+      User email
+    </ResponseField>
+    <ResponseField name="name" type="string">
+      User name if set
+    </ResponseField>
+    <ResponseField name="company_id" type="string">
+      Company id
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<RequestExample>
+```bash Example Request
+curl --location --request POST 'https://api.gists.ai/v1/me' \
+--header 'Content-Type: application/json' \
+--header 'GISTS-API-KEY: <api_key>'
+```
+</RequestExample>
+
+<ResponseExample>
+```json Response
+{
+  "error": null,
+  "data": {
+    "id": "wYNckjmo",
+    "name": "John Doe",
+    "email": "john@doe.org",
+    "company_id": "WVjLTY2NhZThjYi0wM9tcGFueTTg3oy2MMRhYWMtYDQ1MTcY2jMyNS0zNGE="
+  }
+}
+```
+</ResponseExample>
