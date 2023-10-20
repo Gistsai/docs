@@ -11,7 +11,8 @@
     "light": "#AE87FF",
     "dark": "#0D001D",
     "background": {
-      "dark": "#090014"
+      "dark": "#090014",
+      "light": "#eee"
     },
     "anchors": {
       "from": "#FF7F57",
@@ -38,7 +39,10 @@
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart"]
+      "pages": [
+        "introduction",
+        "quickstart"
+      ]
     },
     {
       "group": "Essentials",
@@ -80,11 +84,16 @@
     },
     {
       "group": "API Documentation",
-      "pages": ["api-reference/authentication"]
+      "pages": [
+        "api-reference/authentication"
+      ]
     },
     {
       "group": "Endpoint Examples",
-      "pages": ["api-reference/endpoint/generate", "api-reference/endpoint/gists"]
+      "pages": [
+        "api-reference/endpoint/generate",
+        "api-reference/endpoint/gists"
+      ]
     }
   ],
   "analytics": {
