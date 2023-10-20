@@ -1,14 +1,13 @@
 ---
 title: "Generate"
-api: "POST https://api.gists.ai/v1/generate/{gistId}/{variantSlug}"
+api: "POST /generate/{gistId}/{variantSlug}"
 description: "This endpoint calls the gist and the variant specified in the url parameter"
 ---
 
 ### Body
 
-<ParamField body="body" type="json">
-  This is the current user group token you have for the user group that you want
-  to rotate.
+<ParamField body="values" type="json">
+  A dictionary of variable names and values for the variables in the gist.
 </ParamField>
 
 ### Response
