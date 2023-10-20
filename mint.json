@@ -85,13 +85,13 @@
     {
       "group": "generate",
       "pages": [
-        "generate/generate-output-using-the-gist",
-        "generate/generate-output-with-a-specific-variant-of-the-gist"
+        "api-reference/generate/generate-output-using-the-gist",
+        "api-reference/generate/generate-output-with-a-specific-variant-of-the-gist"
       ]
     },
     {
       "group": "me",
-      "pages": ["me/get-current-user-information"]
+      "pages": ["api-reference/me/get-current-user-information"]
     }
   ],
   "api": {
