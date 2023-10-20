@@ -102,6 +102,9 @@
       "name": "GISTS-API-KEY"
     }
   },
+  "integrations": {
+    "intercom": "p3p3z10k"
+  },
   "analytics": {
     "gtm": {
       "tagId": "GTM-PM7S2JD8"
