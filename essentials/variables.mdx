@@ -2,3 +2,31 @@
 title: 'Variables'
 ---
 
+Like we've mentioned on the [gists](/essentials/gists) page, variables are placeholders in prompt templates.
+
+## Variable format
+
+Gist variables are wrapped in double curly brackets:
+
+```mustache
+{{variable}}
+```
+
+## Variable names rules
+
+In addition, there must be no spaces between the variable name and the curly brackets:
+
+```mustache
+{{ variable }} # ❌
+{{variable}} # ✅
+```
+
+The variable name must starts with a letter and can only contain lowercase letters, numbers, and underscores:
+
+```mustache
+{{1variable}} # ❌
+{{variable-1}} # ❌
+{{Variable-1}} # ❌
+{{variable_1}} # ✅
+{{variable1}} # ✅
+```
