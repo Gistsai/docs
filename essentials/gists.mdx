@@ -2,15 +2,52 @@
 title: 'Gists'
 ---
 
-## Prompts are the new source codes
+A gist is a prompt template that is designed to accomplish a repetitive task.
 
-Source codes have always held immense value for tech companies due to their ability to streamline tasks and increase efficiency.
+## Example
 
-With LLMs, anyone can automate tasks by formulating prompts and integrating them into workflows using NoCode tools.
+Let's take a look at how gists are helpful.
 
-## Gist types
+Many people use ChatGPT to draft emails with prompts like this:
+```text
+Write an email draft:
+- Greet them
+- Ask about the progress of project
+- Mention that it's been late for 1 week
+- Let them know that we can help and wish for some update
 
-Here are some of the most common task types people use LLMs for:
+Be succinct, direct, but polite.
+```
+
+This prompt consists of two parts: the `instruction` part and the `content` part.
+
+<Expandable title="Content">
+```text
+- Greet them
+- Ask about the progress of project
+- Mention that it's been late for 1 week
+- Let them know that we can help and wish for some update
+```
+</Expandable>
+<Expandable title="Instruction">
+```text
+Write an email draft:
+{{outline}}
+
+Be succinct, direct, but polite.
+```
+</Expandable>
+
+While the outline can change case by case, the instructions for the tasks are highly reusable. 
+
+In the above example, we've just created our first step by placing a placeholder `{{outline}}` in the prompt template.
+
+By giving this gist a name, such as `email-draft`, next time we want to create an email draft, we can just type the outline and provide it to the gist.
+
+To see how to run a gist, take a look at the [quick start](/quickstart) guide.
+
+## Types of gists
+Here are some of the most common tasks people use LLMs for:
 
 - Classification
 - Information extraction
