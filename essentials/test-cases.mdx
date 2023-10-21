@@ -1,0 +1,45 @@
+---
+title: 'Test Cases'
+---
+
+So you've written your [gists](/essentials/gists), and used them to automate tasks. But when you're changing them, how do you know if they're getting better and not worse?
+
+Gists is the first platform that makes it easy to create test cases for your gists, so you can ensure consistency when you are changing prompts.
+
+This can cut your prompt-engineering time by over 52%.  
+
+## How it works
+
+A test case consists of values for all the variables used in a gist, as well as an expected output as the reference.
+
+For example, if you have the following gist:
+
+```text
+Classify the following tweet into one of these categories: [news, politics, meme, sports, business, celebrity, technology]
+
+Tweet: """
+{{tweet}}
+"""
+```
+
+We could add the following test cases:
+
+```
+tweet: Reese Witherspoon Tears Up Saying She Felt Like She "Broke" a Year Ago
+expected: celebrity
+```
+
+```
+tweet: Amazon's Andy Jassy Plans to Crash the AI Party
+expected: technology
+```
+
+<Tip>Note, LLMs could classify the last tweet as either technology or business. Which is why we need test cases to understand the behaviors of LLM prompts.</Tip>
+
+## Running test cases
+
+By defining test cases for your gists, we can now measure the consistency of gists by running them multiple times and calculate the success rates.
+
+To calculate the success rates, however, we have to first define how the outputs are evaluated for success and failure.
+
+Let's take a look at the default [evaluators](/essentials/evaluators).
