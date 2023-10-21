@@ -90,8 +90,7 @@
     {
       "group": "Generate",
       "pages": [
-        "api-reference/endpoint/generate",
-        "api-reference/generate/generate-output-with-a-specific-variant-of-the-gist"
+        "api-reference/endpoint/generate"
       ]
     },
     {
