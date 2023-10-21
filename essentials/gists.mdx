@@ -21,6 +21,14 @@ Be succinct, direct, but polite.
 
 This prompt consists of two parts: the `instruction` part and the `content` part.
 
+<Expandable title="Instruction">
+```text
+Write an email draft:
+{{content}}
+
+Be succinct, direct, but polite.
+```
+</Expandable>
 <Expandable title="Content">
 ```text
 - Greet them
@@ -29,25 +37,17 @@ This prompt consists of two parts: the `instruction` part and the `content` part
 - Let them know that we can help and wish for some update
 ```
 </Expandable>
-<Expandable title="Instruction">
-```text
-Write an email draft:
-{{outline}}
 
-Be succinct, direct, but polite.
-```
-</Expandable>
+While the contents can change case by case, the instructions for the tasks are highly reusable. 
 
-While the outline can change case by case, the instructions for the tasks are highly reusable. 
+In the above example, we've just created our first gist by placing a placeholder `{{content}}` in the prompt template.
 
-In the above example, we've just created our first step by placing a placeholder `{{outline}}` in the prompt template.
-
-By giving this gist a name, such as `email-draft`, next time we want to create an email draft, we can just type the outline and provide it to the gist.
+By saving this gist with a name, such as `email-draft`, next time we want to create an email draft, we can just type the outline and provide it to the gist.
 
 To see how to run a gist, take a look at the [quick start](/quickstart) guide.
 
 ## Types of gists
-Here are some of the most common tasks people use LLMs for:
+We can create gists for any of the following tasks that people use LLMs to automate:
 
 - Classification
 - Information extraction
