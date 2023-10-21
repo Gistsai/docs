@@ -2,3 +2,19 @@
 title: 'Variants'
 ---
 
+Gists makes it easy to manage multiple versions of prompts called variants.
+
+You can assign a unique name called slug for each variant.
+
+We don't automatically create new versions of prompts for every edit, which gives you the freedom to manage variants the way you want.
+
+## Examples
+
+For example, one way to manage gist variants is by naming your variants like `dev` and `prod`.
+
+You can edit `dev` variants without worrying that it'll break the user experience. When you're ready to ship it to the customers, you can:
+- assign 100% of the traffic to `dev`
+- rename the current `prod` variant to another name. e.g `prod-2023-10-13`
+- rename the current `dev` variant to `prod`
+
+Another way to manage gist variants is by splitting the traffic between them, so you can A/B test performance of different prompts or LLM parameters such as temperature and topP values.
