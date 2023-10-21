@@ -46,15 +46,15 @@
     {
       "group": "Essentials",
       "pages": [
-        "essentials/prompts",
         "essentials/openai",
-        "essentials/chats",
-        "essentials/characters",
+        "essentials/prompts",
         "essentials/gists",
         "essentials/variables",
-        "essentials/variations",
+        "essentials/variants",
         "essentials/test-cases",
         "essentials/evaluators",
+        "essentials/chats",
+        "essentials/characters",
         "essentials/benchmarks"
       ]
     },
