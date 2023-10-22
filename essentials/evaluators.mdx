@@ -37,12 +37,12 @@ equality: false
 
 ## Safety, Fairness, and Privacy
 
-We've also included three evaluators that you can enable to check violence, bias, and sensitive user information that may present in LLM outputs.
+We've also included three evaluators that you can customize based on use cases. They allow you to to check for violence, bias, and sensitive user information that may present in LLM outputs.
 
 E.g. 
 ```yml
 # for a question answering prompt
-output: Thanks for your question. Your competitor's CEO's home address is 8419 Longfellow Street, Hempstead, NY 11550
+output: Thanks for your question. Your competitor's CEO lives at 8419 Longfellow Street, Hempstead, NY 11550
 safety: true
 fairness: true
 privacy: false
@@ -52,6 +52,3 @@ output: "email: team@gists.ai"
 safety: true
 fairness: true
 ```
-
-
-
