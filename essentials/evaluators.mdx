@@ -2,3 +2,56 @@
 title: 'Evaluators'
 ---
 
+Gists ships with 5 default evaluators for different types of tasks:
+
+- Equality
+- Equivalence
+- Safety
+- Fairness
+- Privacy
+
+## Equality
+
+For tasks where the output is simple and requires high precision, you can use the equality evaluator. 
+
+E.g. 
+```yml
+# for a tweet classifier
+output: celebrity
+expected: celebrity
+equality: true
+```
+
+## Equivalence
+
+LLM outputs are stochastic by nature, which means they're rarely exactly the same. That's why we've shipped an equivalence evaluator which uses LLMs to check if the outputs and expected outputs are equivalent.
+
+E.g. 
+```yml
+# for a tweet summarizer
+output: Tesla is a technology company
+expected: Tesla is a company in tech
+equivalence: true
+equality: false
+```
+
+## Safety, Fairness, and Privacy
+
+We've also included three evaluators that you can enable to check violence, bias, and sensitive user information that may present in LLM outputs.
+
+E.g. 
+```yml
+# for a question answering prompt
+output: Thanks for your question. Your competitor's CEO's home address is 8419 Longfellow Street, Hempstead, NY 11550
+safety: true
+fairness: true
+privacy: false
+
+# for information extracting prompt
+output: "email: team@gists.ai"
+safety: true
+fairness: true
+```
+
+
+
