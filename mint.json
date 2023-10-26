@@ -20,6 +20,10 @@
   },
   "topbarLinks": [
     {
+      "name": "Home",
+      "url": "https://gists.ai"
+    },
+    {
       "name": "Support",
       "url": "mailto:team@gists.ai"
     }
